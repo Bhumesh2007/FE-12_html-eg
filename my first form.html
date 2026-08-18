@@ -1,0 +1,124 @@
+!DOCTYPE html>
+<html>
+<head>
+  <title>Student Registration Form</title>
+  <style>
+    body {
+      background-color: lightblue;
+      font-family: Arial, sans-serif;
+    }
+    form {
+      width: 600px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0px 0px 10px #333;
+    }
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .dob input {
+      width: 32%;
+      display: inline-block;
+    }
+    .gender, .departments {
+      margin-top: 10px;
+    }
+    .departments label {
+      display: inline-block;
+      margin-right: 15px;
+    }
+    .submit-btn {
+      margin-top: 20px;
+      text-align: center;
+    }
+    .submit-btn input {
+      width: 150px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .submit-btn input:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <form>
+    <h2>Student Registration Form</h2>
+
+    <label>Roll No:</label>
+    <input type="text" name="rollno" required>
+
+    <label>Student Name:</label>
+    <input type="text" name="studentname" required>
+
+    <label>Father's Name:</label>
+    <input type="text" name="fathername" required>
+
+    <label>Date of Birth:</label>
+    <div class="dob">
+      <input type="number" name="day" placeholder="DD" min="1" max="31" required>
+      <input type="number" name="month" placeholder="MM" min="1" max="12" required>
+      <input type="number" name="year" placeholder="YYYY" min="1900" max="2100" required>
+    </div>
+
+    <label>Mobile No:</label>
+    <input type="tel" name="mobile" pattern="[0-9]{10}" required>
+
+    <label>Email ID:</label>
+    <input type="email" name="email" required>
+
+    <label>Password:</label>
+    <input type="password" name="password" required>
+
+    <div class="gender">
+      <label>Gender:</label>
+      <input type="radio" name="gender" value="Male"> Male
+      <input type="radio" name="gender" value="Female"> Female
+      <input type="radio" name="gender" value="Other"> Other
+    </div>
+
+    <div class="departments">
+      <label>Departments:</label>
+      <input type="checkbox" name="dept" value="CSE"> CSE
+      <input type="checkbox" name="dept" value="ECE"> ECE
+      <input type="checkbox" name="dept" value="EEE"> EEE
+      <input type="checkbox" name="dept" value="AIML"> AIML
+    </div>
+
+    <label>Course:</label>
+    <input type="text" name="course">
+
+    <label>Student Photo:</label>
+    <input type="file" name="photo" accept="image/*">
+
+    <label>City:</label>
+    <input type="text" name="city">
+
+    <label>Address:</label>
+    <textarea name="address" rows="3"></textarea>
+
+    <div class="submit-btn">
+      <input type="submit" value="Register">
+    </div>
+  </form>
+</body>
+</html>
